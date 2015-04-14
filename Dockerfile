@@ -6,7 +6,7 @@ ENV DEBIAN_FRONTEND noninteractive
 # Install Java 7 and OpenSSH server
 RUN \
   apt-get update -q && \
-  apt-get install -y --no-install-recommends openjdk-7-jre-headless openssh-server && \
+  apt-get install -y --no-install-recommends openjdk-7-jre-headless openssh-server git && \
   apt-get clean && rm -rf /var/lib/apt/lists/* && \
   mkdir /var/run/sshd
 
